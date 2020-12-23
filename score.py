@@ -2,25 +2,27 @@
 import pickle
 import json
 import numpy 
-from sklearn.externals import joblib
+from sklearn import joblib
 from sklearn.tree import DecisionTreeClassifier
 from azureml.core.model import Model
 import time
+import os
 
 def init():
     global model
     #Print statement for appinsights custom traces:
     print ("model initialized" + time.strftime("%H:%M:%S"))
 
-    # note here "best-model.joblib" is the name of the model registered under the workspace
+    # note here "AZUREML_MODEL_DIR" is the name of the model registered under the workspace
     # this call should return the path to the model.pkl file on the local disk.
-    model_path = Model.get_model_path(model_name = 'best-model')
-
+    #model_path = Model.get_model_path(model_name = 'best-model')	
+    model_path = os.path.join(os.getenv('AZUREML_MODEL_DIR'), 'sklearn_minst_model.pkl') 
+	
     # deserialize the model file back into a sklearn model
     model = joblib.load(model_path)
 
 
-# note you can pass in multiple rows for scoring
+# Pass in multiple rows for scoring
 def run(raw_data):
     try:
         data = json.loads(raw_data)['data']

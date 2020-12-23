@@ -54,7 +54,7 @@ def main():
     #run.log("Impurity split value:", np.float(args.min_impurity_decrease))
     
     
-    model = DecisionTreeClassifier(max_depth=args.max_depth,min_samples_split=args.min_samples_split, random_state=0).fit(x_train, y_train)
+    model = DecisionTreeClassifier(max_depth=args.max_depth, min_samples_split=args.min_samples_split, random_state=0).fit(x_train, y_train)
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
     
