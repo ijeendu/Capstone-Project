@@ -1,7 +1,7 @@
 ##writefile score.py
 import pickle
 import json
-import numpy 
+import numpy, pandas
 from sklearn.externals import joblib
 from sklearn.tree import DecisionTreeClassifier
 from azureml.core.model import Model
@@ -20,12 +20,11 @@ def init():
     model = joblib.load(model_path)
 
 
-# Pass in multiple rows for scoring
+# can pass in multiple rows for scoring
 def run(raw_data):
     try:
-        data = json.loads(raw_data)['data']
-        data = numpy.array(data)
-		#make prediction
+        data = json.dumps(raw_data)               
+        #make prediction
         result = model.predict(data)
         # Log the input and output data to appinsights:
         info = {
@@ -33,7 +32,7 @@ def run(raw_data):
             "output": result.tolist()
             }
         print(json.dumps(info))
-        # you can return any datatype as long as it is JSON-serializable
+        # return any datatype as long as it is JSON-serializable
         return result.tolist()
     except Exception as e:
         error = str(e)
