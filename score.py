@@ -23,7 +23,10 @@ def init():
 # can pass in multiple rows for scoring
 def run(raw_data):
     try:
-        data = json.dumps(raw_data)               
+        # load raw data
+        data = json.loads(raw_data)['data']
+        # convert to input format - DataFrame
+        data = pandas.DataFrame.from_dict(data)             
         #make prediction
         result = model.predict(data)
         # Log the input and output data to appinsights:
