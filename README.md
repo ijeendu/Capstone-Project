@@ -12,14 +12,14 @@ Finally, the functionality of the deployed model is demonstrated by sending HTTP
 
 According to the WHO, perinatal mortality refers to the number of stillbirths and deaths in the first week of life. It is also called early neonatal mortality. One of the major causes of perinatal mortality is intrapartum complications[[1](https://pubmed.ncbi.nlm.nih.gov/11132590/) ,[2](https://europepmc.org/article/pmc/pmc6822315)]. Fetal cardiotocograph (CTGs) can be used as a monitoring tool to identify high-risk women/fetuses during labor [[1](https://pubmed.ncbi.nlm.nih.gov/11132590/)].
 
-One of the recent research efforts towards addressing this problem was recently published by [Hoodbhoy Z et. al](https://europepmc.org/article/pmc/pmc6822315). The article investigated the precision of machine learning algorithm techniques for identifying high risk fetuses using CTG data. Ten different machine learning classification models were trained using CTG data. Sensistivity, precision and F1 scores for each class and overall accuracy of each model were used to predict the fetal states as one of Normal, Suspect or Pathological (NSP). Their result showed that the XGBoost, Decision tree and Random Forest classifiers predicted the Suspect and Pathological states with a high precision (>96%)on training data and (>92%) on test data.
+One of the recent research efforts towards addressing this problem was recently published by [Hoodbhoy Z et. al](https://europepmc.org/article/pmc/pmc6822315). The article investigated the precision of machine learning algorithm techniques for identifying high risk fetuses using CTG data. Ten different machine learning classification models were trained using CTG data. Sensistivity, precision and F1 scores for each class and overall accuracy of each model were used to predict the fetal states as one of Normal, Suspect or Pathological (NSP). Their result showed that the XGBoost, Decision tree and Random Forest classifiers predicted the Suspect and Pathological states with a high precision (>96%) on training data and (>92%) on test data.
 
-As an extension of their work, this project was aimed at training machine learning models for predicting fetal risk based on CTG data, using the same dataset and the `AutoML` and `HyperDrive` training capabilities of the Microsoft Azure Machine Learning SDK.  Both experiments were successfully completed and the best performing model (in terms of accuracy metric) for the AutoML experiment was deployed as a web service.  
+As an extension of their work, this project was aimed at training machine learning models for predicting fetal risk based on CTG data, using the same dataset and the `AutoML` and `HyperDrive` training capabilities of the Microsoft Azure Machine Learning SDK.  Both experiments were successfully completed and the best performing model (based on accuracy metric) for the AutoML experiment was deployed as a web service.  
 
 The `HyperDrive` experiment was aimed at optimising the parameters of a pre-selected machine learning algorithm to achieve a high accuracy machine learning model. 
-For this experiment, the decison tree classifier algorithm was used. The `max_depth` and `min_samples_split` paramters of the classifier were tuned resulting in a classification model with >98% accuracy. 
+For this experiment, the decison tree classifier algorithm was used. The `max_depth` and `min_samples_split` paramters of the classifier were tuned resulting in a classification model with `accuracy > 98%`. 
 
-The `AutoML` experiment was used to automatically explore a variety of machine learning algorithms for improved model performance.  The best performing algorithm was selected based on a pre-specified performance metric of accuracy. The result of the the AutoML experiment showed that the `Voting Ensemble` model was the best performing algorithm with a >99% classification accuracy. The AutoML experiment offers the great advantage of exploring multiple algorithms within a shorter time frame compared to the amount of time required to perform similar tasks without automation. 
+The `AutoML` experiment was used to automatically explore a variety of machine learning algorithms for improved model performance.  The best performing algorithm was selected based on a pre-specified performance metric of accuracy. The result of the the AutoML experiment showed that the `Voting Ensemble` model was the best performing algorithm with `accuracy > 99%`. The AutoML experiment offers the great advantage of exploring multiple algorithms within a shorter time frame compared to the amount of time required to perform similar tasks without automation. 
 
 The best performing model from the AutoML experiment was deployed as a webservice using Azure Container Instance (ACI) and a REST URI was produced. HTTP post requests were successfully sent to the URI for Inferencing.
 
@@ -94,18 +94,25 @@ The details of the AutoML experiment were accessed using the `RunDetails` widget
  <img src="images/automl_run_details_2.png">
 </p>
 
-A total of 36 iterations were performed and the corresponding performance values are shown:
+A total of 36 iterations were performed in this experiment and the corresponding performance values are shown:
 
 <p align="center">
  <img src="images/automl_run_details_1.png">
 </p>
 
 
-The `Voting Ensemble model` at the 36th iterationwas the best performing model with the `accuracy > 99%` and it was selected as the best model. The best trained model and it's parameters are shown below:
+The `Voting Ensemble model` at the 36th iteration was the best performing model with the `accuracy > 99%` and it was selected as the best model. The best trained model and its parameters are shown below:
 
 <p align="center">
  <img src="images/best_model_automl.png">
 </p>
+
+
+<p align="center">
+ <img src="images/best_automl_model.png">
+</p>
+
+best_automl_model
 
 
 The AutoML output alerted that the dataset contained unbalanced classes with the label of the smallest class equal to three. This means that the resulting model could be biased. One way to mitigate this would be to perform a class balancing operation using (Synthetic Minority Oversampling Technique) SMOTE in Azure Machine Learning Studio to improve the quality of the dataset prior to model training. 
