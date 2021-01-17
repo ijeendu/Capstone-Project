@@ -75,11 +75,6 @@ The dataset is hosted in the same Github respository as the project files and is
 
 The `from_delimited_files('path=URL')` method of the `TabularDatasetFactory` class in Microsoft Azure was used to retrieve the data from the .csv file during model training.
 
-<p align="center">
- <img src="images/retrieve_data.png">
-</p>
-
-
 
 ## Automated ML
 
