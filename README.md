@@ -91,13 +91,13 @@ The `AutoMLConfig` Class specifies the configuration for submitting an AutoML ma
 The details of the AutoML experiment were accessed using the `RunDetails` widget as shown in the screen shots below.
 
 <p align="center">
- <img src="images/runDetails_automl.png">
+ <img src="images/automl_run_details_1.png">
 </p>
 
 A total of 36 iterations were performed and the corresponding performance values are shown:
 
 <p align="center">
- <img src="images/runDetails_automl.png">
+ <img src="images/automl_run_details_2.png">
 </p>
 
 -- screen shot of best automl model with its paramters the properties from the Notebook
