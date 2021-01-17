@@ -112,8 +112,6 @@ The `Voting Ensemble model` at the 36th iteration was the best performing model 
  <img src="images/best_automl_model.png">
 </p>
 
-best_automl_model
-
 
 The AutoML output alerted that the dataset contained unbalanced classes with the label of the smallest class equal to three. This means that the resulting model could be biased. One way to mitigate this would be to perform a class balancing operation using (Synthetic Minority Oversampling Technique) SMOTE in Azure Machine Learning Studio to improve the quality of the dataset prior to model training. 
 
