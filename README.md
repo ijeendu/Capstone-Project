@@ -91,6 +91,10 @@ The `AutoMLConfig` Class specifies the configuration for submitting an AutoML ma
 The details of the AutoML experiment were accessed using the `RunDetails` widget as shown in the screen shots below.
 
 <p align="center">
+ <img src="images/automl_run_details_3.png">
+</p>
+
+<p align="center">
  <img src="images/automl_run_details_2.png">
 </p>
 
