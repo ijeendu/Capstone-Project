@@ -95,6 +95,10 @@ The details of the AutoML experiment were accessed using the `RunDetails` widget
 </p>
 
 <p align="center">
+ <img src="images/automl_run_details_4.png">
+</p>
+
+<p align="center">
  <img src="images/automl_run_details_2.png">
 </p>
 
