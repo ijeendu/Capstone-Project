@@ -91,18 +91,17 @@ The `AutoMLConfig` Class specifies the configuration for submitting an AutoML ma
 The details of the AutoML experiment were accessed using the `RunDetails` widget as shown in the screen shots below.
 
 <p align="center">
- <img src="images/automl_run_details_1.png">
+ <img src="images/automl_run_details_2.png">
 </p>
 
 A total of 36 iterations were performed and the corresponding performance values are shown:
 
 <p align="center">
- <img src="images/automl_run_details_2.png">
+ <img src="images/automl_run_details_1.png">
 </p>
 
--- screen shot of best automl model with its paramters the properties from the Notebook
 
-The `Voting Ensemble model` at the 36th iteration with `automl ID` =  was the best performing model with the highest accuracy (>99%) and it was selected as the best model. The best trained model and it's parameters are shown below:
+The `Voting Ensemble model` at the 36th iterationwas the best performing model with the `accuracy > 99%` and it was selected as the best model. The best trained model and it's parameters are shown below:
 
 <p align="center">
  <img src="images/best_model_automl.png">
@@ -170,14 +169,14 @@ The `Voting Ensemble` with accuracy > 99% obtained from the `AutoML experiment` 
 Following successful deployment, the scoring uri and the primary authentication key was retrieved using the `serivce run` method as shown:
 
 <p align="center">
- <img src="images/deployed_model.png">
+ <img src="images/serviceState_inputData.png">
 </p>
 
 Data was sent to the webservice in JSON format in form of HTTP post requests for inferencing. The predicted results were successfully returned as shown:
 
 
 <p align="center">
- <img src="images/http_post_request.png">
+ <img src="images/webRequest.png">
 </p>
 
 
