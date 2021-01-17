@@ -173,13 +173,13 @@ The `Voting Ensemble` with accuracy > 99% obtained from the `AutoML experiment` 
  <img src="images/deployed_model.png">
 </p>
 
-Following successful deployment, the scoring uri and the primary authentication key was retrieved using the `serivce run` method as shown:
+Following successful deployment, the scoring uri and the primary authentication key was retrieved using approriate `serivce` methods. The test input data was converted to JSON format and used to send HTTP post request to the webservice for inferencing.
 
 <p align="center">
  <img src="images/serviceState_inputData.png">
 </p>
 
-Data was sent to the webservice in JSON format in form of HTTP post requests for inferencing. The predicted results were successfully returned as shown:
+The predicted results from the webservice were successfully retrieved as shown:
 
 
 <p align="center">
@@ -190,14 +190,6 @@ Data was sent to the webservice in JSON format in form of HTTP post requests for
 ## Screen Recording
 
 A short recording demonstrationg the working machine learning model, its deployment and a sample request sent to the end point together with its response is available [here](https://youtu.be/YrU2s5KBfxg).
-
-## Standout Suggestions
-
-Authentication and Logging were enabled as shown below:
-
-<p align="center">
- <img src="images/http_post_request.png">
-</p>
 
 
 
