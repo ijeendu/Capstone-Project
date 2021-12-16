@@ -143,7 +143,7 @@ The `HyperDriveConfig` Class specifies the configuration that defines a HyperDri
 
 ### Results
 
-The best performing model obtained from the hyperparamter tuning experiment had `accuracy > 98%` with model parameters `max_depth = 8` and `min_samples_split =8` as shown in the screen shot below.
+The best performing model obtained from the hyperparameter tuning experiment had `accuracy > 98%` with model parameters `max_depth = 8` and `min_samples_split =8` as shown in the screen shot below.
 
 
 <p align="center">
@@ -164,14 +164,14 @@ The run details of the hyperdrive experiment available through `RunDetails` widg
  <img src="images/hyperdrive_details_3.png">
 </p>
 
-The model can be improved by including more model parameters for optimisation or using the grid parameter sampling approach which explores all possible parameter combinations if budget resources are available. Also, other evaluation metrics such as F1 score, Precison and Recall can be used as the primary metric to improve overall model performance.
+The model can be improved by including more model parameters for optimisation or using the grid parameter sampling approach which explores all possible parameter combinations if budget resources are available. Also, other evaluation metrics such as F1 score, Precision and Recall can be used as the primary metric to improve overall model performance.
 
 
 
 
 ## Model Deployment
 
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
+An overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 The `Voting Ensemble` with accuracy > 99% obtained from the `AutoML experiment` was deployed using the Azure Container Instance (ACI) because it had a slightly better performance(>1%) than the Decision tree classifer model trained using the Hyperdrive experiment. he model was successfully deployed as a webservice. An overview of the deployed model is shown in the screen shot below:
 
