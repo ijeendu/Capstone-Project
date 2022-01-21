@@ -1,5 +1,5 @@
 
-# Capstone Project for Machine Learning in Azure Nanodegree 
+# Predicting Fetal Risk based on Cardiotocograph data using Azure Machine Learning 
 
 ## Introduction
 
