@@ -3,8 +3,8 @@
 
 ## Introduction
 
-This is a capstone project for the Udacity Nanodegree in Machine Learning with Microsoft Azure. The project objective was to develop a machine learning model using a dataset that is external to Azure using both AutoML and Hyperparameter tuning experiments. The best performing model for each experiment is registered, then one of the models is selected for deployment as a web service. 
-Finally, the functionality of the deployed model is demonstrated by sending HTTP post requests to the web service and for Inferencing and successfully receiving the scoring results as demonstrated and documented in the project notebooks and in this report.
+This is a capstone project for the Udacity Nanodegree in Machine Learning with Microsoft Azure. The project objective was to develop a machine learning model using a dataset that is external to Azure using both AutoML and Hyperparameter tuning experiments. The best performing model for each experiment is registered, then one of the best models was selected for deployment as a web service. 
+Finally, the functionality of the deployed model was demonstrated by sending HTTP post requests to the web service for Inferencing and successfully receiving the scoring results as demonstrated and documented in the project notebooks and in this report.
 
 
 
