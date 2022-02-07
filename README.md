@@ -3,8 +3,8 @@
 
 ## Introduction
 
-This is a capstone project for the Udacity Nanodegree in Machine Learning with Microsoft Azure. The project objective was to develop a machine learning model using a dataset that is external to Azure using both AutoML and Hyperparameter tuning experiments. The best performing model for each experiment is registered, then one of the best models was selected for deployment as a web service. 
-Finally, the functionality of the deployed model was demonstrated by sending HTTP post requests to the web service for Inferencing and successfully receiving the scoring results as demonstrated and documented in the project notebooks and in this report.
+This is a capstone project for the Udacity Nanodegree in Machine Learning with Microsoft Azure. The project objective was to develop a machine learning model using a dataset that is external to Azure using both AutoML and Hyperparameter tuning experiments. The best performing model for each experiment was registered, then one of the best was selected for deployment as a web service. 
+Finally, the functionality of the deployed model was demonstrated by sending HTTP post requests to the web service for Inferencing and successfully receiving the scoring results as demonstrated and documented in the project notebooks and in this document.
 
 
 
@@ -17,7 +17,7 @@ One of the recent research efforts towards addressing this problem was recently 
 As an extension of their work, this project was aimed at training machine learning models for predicting fetal risk based on CTG data, using the same dataset and the `AutoML` and `HyperDrive` training capabilities of the Microsoft Azure Machine Learning SDK.  Both experiments were successfully completed and the best performing model (based on accuracy metric) for the AutoML experiment was deployed as a web service.  
 
 The `HyperDrive` experiment was aimed at optimising the parameters of a pre-selected machine learning algorithm to achieve a high accuracy machine learning model. 
-For this experiment, the decison tree classifier algorithm was used. The `max_depth` and `min_samples_split` paramters of the classifier were tuned resulting in a classification model with `accuracy > 98%`. 
+For this experiment, the decison tree classifier algorithm was used. The `max_depth` and `min_samples_split` parameters of the classifier were tuned resulting in a classification model with `accuracy > 98%`. 
 
 The `AutoML` experiment was used to automatically explore a variety of machine learning algorithms for improved model performance.  The best performing algorithm was selected based on a pre-specified performance metric of accuracy. The result of the the AutoML experiment showed that the `Voting Ensemble` model was the best performing algorithm with `accuracy > 99%`. The AutoML experiment offers the great advantage of exploring multiple algorithms within a shorter time frame compared to the amount of time required to perform similar tasks without automation. 
 
