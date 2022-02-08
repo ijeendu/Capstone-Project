@@ -171,7 +171,7 @@ The model can be improved by including more model parameters for optimisation or
 
 ## Model Deployment
 
-An overview of the deployed model and instructions on how to query the endpoint with a sample input.
+An overview of the deployed model and instructions on how to query the endpoint with a sample input is shown:
 
 The `Voting Ensemble` with accuracy > 99% obtained from the `AutoML experiment` was deployed using the Azure Container Instance (ACI) because it had a slightly better performance(>1%) than the Decision tree classifer model trained using the Hyperdrive experiment. he model was successfully deployed as a webservice. An overview of the deployed model is shown in the screen shot below:
 
@@ -195,7 +195,7 @@ The predicted results from the webservice were successfully retrieved as shown:
 
 ## Screen Recording
 
-A short recording demonstrationg the working machine learning model, its deployment and a sample request sent to the end point together with its response is available [here](https://youtu.be/YrU2s5KBfxg).
+A short recording demonstrating the developed machine learning model in Microsoft Azure, its deployment, and a sample request sent to the end point together with its response is available [here](https://youtu.be/YrU2s5KBfxg).
 
 
 
